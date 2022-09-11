@@ -494,7 +494,8 @@ rel="stylesheet"/>
             </div>
             <div class="sosial-footer-sing-up">
                 <p class="social-footer-title"> підпишіться на розсилку </p>
-            <form 
+            
+              <form class="social-footer-form"
             name="signup_form" 
             autocomplete="on"
             >
@@ -504,20 +505,98 @@ rel="stylesheet"/>
                 name="email" 
                 id="user_email" 
                 placeholder="E-mail"
+                required
                 class="social-footer-signup-form"/>
             </label>
-                <button type="submit">підписатися</button>
+       <button class="social-footer-btn" type="submit">Підписатися
+                    <svg 
+                    aria-label="іконка літака"
+                    class="social-footer-icon-fly" 
+                    width="24" height="24">
+                        <use href="./images//icon.svg#icon-fly"></use>
+                      </svg>  
+                </button> 
             </form>
+                  
+            
             </div>
+            
   </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
             <svg class="modal-close-icon" width="18" height="18">
-              <use href="./images//icon.svg#icon-close"></use>
+              <use href="./images//icon.svg#icon-closee"></use>
             </svg>
           </button>
+          <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
+          <form class="modal-form">
+            <label class="modal-form-field">
+              <span class="modal-form-field-desc">Імʼя</span>
+              <span class="modal-form-input-wrapper">
+                <input
+                  type="text"
+                  class="modal-form-input"
+                  required
+                  pattern="[a-zA-Zа-яА-ЯіІїЇ`ʼ]+"
+                  name="user_name"
+                  
+                />
+                <svg class="modal-form-icon" width="18" height="18">
+                    <use href="./images//icon.svg#icon-person"></use>
+                  </svg>
+              </span>
+            </label>
+            <label class="modal-form-field">
+              <span class="modal-form-field-desc">Телефон</span>
+              <span class="modal-form-input-wrapper">
+                <input
+                  type="tel"
+                  class="modal-form-input"
+                  required
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  title="xxx-xxx-xx-xx"
+                  name="user_phone"
+                 
+                />
+                <svg class="modal-form-icon" width="18" height="18">
+                    <use href="./images//icon.svg#icon-phone"></use>
+                  </svg>
+              </span>
+            </label>
+            <label class="modal-form-field">
+                <span class="modal-form-field-desc">Пошта</span>
+                <span class="modal-form-input-wrapper">
+                  <input
+                    type="mail"
+                    class="modal-form-input"
+                    required
+                    pattern="[a-zA-Zа-яА-ЯіІїЇ`ʼ]+"
+                    name="user_mail"                    
+                  />
+                  <svg class="modal-form-icon" width="18" height="18">
+                      <use href="./images//icon.svg#icon-email"></use>
+                    </svg>
+                </span>
+              </label>
+            <label class="modal-form-field">
+              <span class="modal-form-field-desc">Коментар</span>
+              <textarea
+                name="user_message"
+                class="modal-form-message"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+            <label class="modal-form-check-field">
+              <input type="checkbox" class="modal-form-check" name="user_policy" required />
+              <svg class="modal-form-own-checkbox">
+                <use class="modal-form-own-checkbox-icon" href="./images/icon.svg#icon-Vector"></use>
+              </svg>
+              Погоджуюся з розсилкою та приймаю &nbsp;<a href="#" class="checkbox-accent">Умови договору</a>
+            </label>
+            <button type="submit" class="modal-form-sumbit">Відправити</button>
+          </form>
     </div>
     </div>
     <script src="./js/modal.js"></script>
